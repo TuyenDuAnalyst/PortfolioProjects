@@ -62,6 +62,7 @@ order by TotalDeathCount desc
 
 -- GLOBAL NUMBERS 
 Select sum(new_cases) as total_cases, sum(cast(new_deaths as int)) as total_dealths, sum(cast(new_deaths as int))/sum(new_cases)*100 as DeathPercentage
+From [PortfolioProject ]..CovidDeaths$
 --Where location like '%states%' 
 where continent is not null
 --group by date 
